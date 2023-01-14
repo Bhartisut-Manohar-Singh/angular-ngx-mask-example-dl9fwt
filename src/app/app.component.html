@@ -1,0 +1,94 @@
+
+<div>
+	<label>Number</label>
+  <input type="text" mask="0*" placeholder="123456789"  >
+</div>
+
+
+<div>
+	<label>Number</label>
+  <input type="text" mask="0*" [(ngModel)]="number" >
+</div>
+
+<div>
+  <label>Number 0000-000</label>
+  <input type="text" mask="0000-0000" [(ngModel)]="number">
+</div>
+
+
+<div>
+  <label>Number (00) 0000 00</label>
+  <input type="text" mask="(00) 0000 000" [(ngModel)]="number">
+</div>
+
+
+<div>
+  <label>Number (00) 0000 00</label>
+  <input type="text" prefix="+963 "  mask="00 0000 000"  [showMaskTyped]= "true">
+</div>
+
+<div>
+  <label>IBAN</label>
+  <input type="text"   mask="SS 0000 0000 0000 0000" [(ngModel)]="iban">
+</div>
+
+
+<div>
+  <label>email</label>
+  <input type="text"   mask="A*@A*.S" [clearIfNotMatch]="true" placeholder="example@domine.com">
+</div>
+
+<div>
+  <label>text</label>
+  <input type="text"   mask="AA?A?A?A?A?A?A?A?" [clearIfNotMatch]="true" placeholder="something about something">
+</div>
+
+<div>
+  <label>Number Format  1000.000,5</label>
+   <input type='text' mask="coma_separator.2"  [(ngModel)]="s"> {{s}}
+</div>
+<div>
+  <label>Number Format  1000,000.5</label>
+   <input type='text' mask="coma_separator.10" > {{s}}
+</div>
+
+<div>
+  <label>Number Format  1000,000.5</label>
+   <input type='text' mask="coma_separator.10" [(ngModel)]="price01"> 
+</div>
+<div>
+  <label>Number Format  1000,000.5</label>
+   <input type='text' mask="coma_separator.10" [(ngModel)]="price02"> 
+</div>
+
+<div>
+  <label>Number Format  1000,000.5</label>
+   <input type='text' mask="coma_separator.10" [(ngModel)]="price03"> 
+</div>
+
+<div>
+  <label>Number Format  zero</label>
+   <input type='text' mask="coma_separator.10" [(ngModel)]="zero"> 
+</div>
+
+<br>
+
+<div>
+  <label>Tr</label>
+   <input type='text' mask="coma_separator.2"  [(ngModel)]="tr"> {{tr}}
+</div>
+
+<div>
+  <label>Tr</label>
+   <input type='text' mask="coma_separator.4"  [(ngModel)]="tr2" > {{tr2}}
+</div>
+
+<div [formGroup]="form">
+
+<div>
+  <label>Tr s</label>
+   <input type='text' mask="separator"  formControlName="number" > 
+</div>
+
+{{form.value | json}}
+</div>
